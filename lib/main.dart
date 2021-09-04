@@ -9,9 +9,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int days = 1;
+    String name = 'jashwanth';
+
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Text('welcome to shani world!!'),
-    );
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text('Shani Catalog App'),
+            backgroundColor: Colors.amberAccent[100],
+            elevation: 0,
+          ),
+          body: Container(
+            child: Center(
+                child: Text('welcome to shani world in $days by $name!!')),
+          ),
+        ));
   }
 }
