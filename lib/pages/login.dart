@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce_app/utils/routes.dart';
 
 class Login extends StatelessWidget {
   const Login({Key key}) : super(key: key);
@@ -51,7 +52,7 @@ class Login extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/');
+                Navigator.pushNamed(context, MyRoutes.homeRoute);
               },
               child: Text('Login!!'),
               style: TextButton.styleFrom(minimumSize: Size(150, 40)),
