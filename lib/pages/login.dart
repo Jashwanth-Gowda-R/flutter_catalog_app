@@ -10,6 +10,7 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   String name = '';
+  bool changeButton = false;
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -60,13 +61,41 @@ class _LoginState extends State<Login> {
             SizedBox(
               height: 40,
             ),
-            ElevatedButton(
-              onPressed: () {
+            InkWell(
+              onTap: () async {
+                setState(() {
+                  changeButton = true;
+                });
+                await Future.delayed(Duration(seconds: 1));
                 Navigator.pushNamed(context, MyRoutes.homeRoute);
               },
-              child: Text('Login!!'),
-              style: TextButton.styleFrom(minimumSize: Size(150, 40)),
-            ),
+              child: AnimatedContainer(
+                duration: Duration(seconds: 1),
+                width: changeButton ? 60 : 150,
+                height: 50,
+                alignment: Alignment.center,
+                child: changeButton
+                    ? Icon(Icons.done)
+                    : Text(
+                        'Login!!',
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                decoration: BoxDecoration(
+                  color: Colors.purple,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            )
+            // ElevatedButton(
+            //   onPressed: () {
+            //     Navigator.pushNamed(context, MyRoutes.homeRoute);
+            //   },
+            //   child: Text('Login!!'),
+            //   style: TextButton.styleFrom(minimumSize: Size(150, 40)),
+            // ),
           ],
         ),
       ),
