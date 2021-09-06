@@ -11,7 +11,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Shani Catalog App'),
-        backgroundColor: Colors.amberAccent[100],
+        // backgroundColor: Colors.amberAccent[100],
         elevation: 0,
       ),
       body: Container(
