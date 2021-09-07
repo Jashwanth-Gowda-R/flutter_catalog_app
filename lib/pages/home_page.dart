@@ -8,30 +8,21 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int days = 1;
-    String name = 'jashwanth';
-
+    final dummyList = List.generate(30, (index) => CatalogModel.products[0]);
     return Scaffold(
         appBar: AppBar(
           title: Text('Shani Catalog App'),
         ),
-        // appBar: AppBar(
-        //   title: Text(
-        //     'Shani Catalog App',
-        //     style: TextStyle(color: Colors.black),
-        //   ),
-        //   // backgroundColor: Colors.amberAccent[100],
-        //   elevation: 0,
-        //   backgroundColor: Colors.white,
-        //   iconTheme: IconThemeData(color: Colors.black),
-        // ),
         drawer: MyDrawer(),
-        body: ListView.builder(
-            itemCount: CatalogModel.products.length,
-            itemBuilder: (context, index) {
-              return ItemWidget(
-                item: CatalogModel.products[index],
-              );
-            }));
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: ListView.builder(
+              itemCount: dummyList.length,
+              itemBuilder: (context, index) {
+                return ItemWidget(
+                  item: dummyList[index],
+                );
+              }),
+        ));
   }
 }
