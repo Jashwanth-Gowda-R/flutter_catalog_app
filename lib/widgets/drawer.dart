@@ -23,7 +23,7 @@ class MyDrawer extends StatelessWidget {
                   'Shani',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 24,
+                      fontSize: 18,
                       color: Colors.white),
                 ),
                 accountEmail: Text('Shani@gmail.com'),
