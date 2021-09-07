@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/widgets/drawer.dart';
 
@@ -25,11 +23,11 @@ class Home extends StatelessWidget {
       //   backgroundColor: Colors.white,
       //   iconTheme: IconThemeData(color: Colors.black),
       // ),
+      drawer: MyDrawer(),
       body: Container(
         child:
             Center(child: Text('welcome to shani world in $days by $name!!')),
       ),
-      drawer: MyDrawer(),
     );
   }
 }
