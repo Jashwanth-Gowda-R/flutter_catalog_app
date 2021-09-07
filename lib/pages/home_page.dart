@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce_app/widgets/drawer.dart';
 
 class Home extends StatelessWidget {
   const Home({Key key}) : super(key: key);
@@ -18,7 +19,7 @@ class Home extends StatelessWidget {
         child:
             Center(child: Text('welcome to shani world in $days by $name!!')),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
