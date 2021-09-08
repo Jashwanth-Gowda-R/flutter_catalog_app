@@ -44,12 +44,30 @@ class _HomeState extends State<Home> {
           padding: const EdgeInsets.all(16.0),
           child: (CatalogModel.products != null &&
                   CatalogModel.products.isNotEmpty)
-              ? ListView.builder(
+              ? GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 16,
+                      crossAxisSpacing: 16),
                   itemCount: CatalogModel.products.length,
                   itemBuilder: (context, index) {
-                    return ItemWidget(
-                      item: CatalogModel.products[index],
-                    );
+                    final item = CatalogModel.products[index];
+                    return Card(
+                        child: GridTile(
+                          child: Image.network(item.image),
+                          header: Container(
+                              child: Text(
+                                item.name,
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              padding: EdgeInsets.all(12),
+                              decoration:
+                                  BoxDecoration(color: Colors.deepPurple)),
+                          footer: Text(item.price.toString()),
+                        ),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        clipBehavior: Clip.antiAlias);
                   },
                 )
               : Center(
