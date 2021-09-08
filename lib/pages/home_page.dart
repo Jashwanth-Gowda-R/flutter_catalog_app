@@ -42,13 +42,19 @@ class _HomeState extends State<Home> {
         drawer: MyDrawer(),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: ListView.builder(
-              itemCount: CatalogModel.products.length,
-              itemBuilder: (context, index) {
-                return ItemWidget(
-                  item: CatalogModel.products[index],
-                );
-              }),
+          child: (CatalogModel.products != null &&
+                  CatalogModel.products.isNotEmpty)
+              ? ListView.builder(
+                  itemCount: CatalogModel.products.length,
+                  itemBuilder: (context, index) {
+                    return ItemWidget(
+                      item: CatalogModel.products[index],
+                    );
+                  },
+                )
+              : Center(
+                  child: CircularProgressIndicator(),
+                ),
         ));
   }
 }
