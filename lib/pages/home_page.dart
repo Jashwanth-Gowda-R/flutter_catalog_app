@@ -20,9 +20,21 @@ class _HomeState extends State<Home> {
     loadData();
   }
 
+  loadData() async {
+    var catalogJson = await rootBundle.loadString('/files/catalog.json');
+    // print(catalogJson);
+    var data = jsonDecode(catalogJson);
+    // print(data);
+    var productsData = data['products'];
+    // print(productsData);
+    CatalogModel.products =
+        List.from(productsData).map((item) => Item.fromMap(item)).toList();
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
-    final dummyList = List.generate(30, (index) => CatalogModel.products[0]);
+    // final dummyList = List.generate(30, (index) => CatalogModel.products[0]);
     return Scaffold(
         appBar: AppBar(
           title: Text('Shani Catalog App'),
@@ -31,21 +43,12 @@ class _HomeState extends State<Home> {
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: ListView.builder(
-              itemCount: dummyList.length,
+              itemCount: CatalogModel.products.length,
               itemBuilder: (context, index) {
                 return ItemWidget(
-                  item: dummyList[index],
+                  item: CatalogModel.products[index],
                 );
               }),
         ));
-  }
-
-  loadData() async {
-    var catalogJson = await rootBundle.loadString('/files/catalog.json');
-    // print(catalogJson);
-    var data = jsonDecode(catalogJson);
-    // print(data);
-    var productsData = data['products'];
-    print(productsData);
   }
 }
