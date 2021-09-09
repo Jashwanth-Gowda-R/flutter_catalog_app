@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_ecommerce_app/models/catalog.dart';
-import 'package:flutter_ecommerce_app/pages/home_widgets/CatalogHeader.dart';
-import 'package:flutter_ecommerce_app/pages/home_widgets/CatalogList.dart';
+import 'package:flutter_ecommerce_app/widgets/home_widgets/CatalogHeader.dart';
+import 'package:flutter_ecommerce_app/widgets/home_widgets/CatalogList.dart';
 import 'package:flutter_ecommerce_app/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
