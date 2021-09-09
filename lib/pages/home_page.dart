@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
                 CatalogHeader(),
                 if (CatalogModel.products != null &&
                     CatalogModel.products.isNotEmpty)
-                  CatalogList().expand()
+                  CatalogList().py12().expand()
                 else
                   CircularProgressIndicator().centered().py16().expand()
               ],
