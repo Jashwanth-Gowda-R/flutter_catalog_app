@@ -27,7 +27,7 @@ class HomeDetailsPage extends StatelessWidget {
                         backgroundColor:
                             MaterialStateProperty.all(MyTheme.darkBluishColor),
                         shape: MaterialStateProperty.all(StadiumBorder())),
-                    child: "Buy Now".text.lg.make())
+                    child: "Add Cart".text.lg.make())
                 .wh(100, 50)
           ],
         ).p32(),

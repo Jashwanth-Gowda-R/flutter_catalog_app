@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_ecommerce_app/models/catalog.dart';
+import 'package:flutter_ecommerce_app/utils/routes.dart';
 import 'package:flutter_ecommerce_app/widgets/home_widgets/CatalogHeader.dart';
 import 'package:flutter_ecommerce_app/widgets/home_widgets/CatalogList.dart';
 import 'package:flutter_ecommerce_app/widgets/themes.dart';
@@ -39,6 +40,13 @@ class _HomeState extends State<Home> {
     // final dummyList = List.generate(30, (index) => CatalogModel.products[0]);
     return Scaffold(
         backgroundColor: MyTheme.creamColor,
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.pushNamed(context, MyRoutes.cartRoute);
+          },
+          backgroundColor: MyTheme.darkBluishColor,
+          child: Icon(Icons.shopping_cart),
+        ),
         body: SafeArea(
           child: Container(
             padding: Vx.m32,
