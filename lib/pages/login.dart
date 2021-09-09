@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_app/utils/routes.dart';
+import 'package:shani/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class Login extends StatefulWidget {

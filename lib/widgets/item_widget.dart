@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_app/models/catalog.dart';
+import 'package:shani/models/catalog.dart';
+// import 'package:flutter_ecommerce_app/models/catalog.dart';
 
 class ItemWidget extends StatelessWidget {
   final Item item;

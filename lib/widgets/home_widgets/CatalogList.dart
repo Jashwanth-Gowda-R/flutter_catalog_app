@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_app/models/catalog.dart';
-import 'package:flutter_ecommerce_app/pages/home_detail_page.dart';
-import 'package:flutter_ecommerce_app/widgets/home_widgets/CatalogImage.dart';
-import 'package:flutter_ecommerce_app/widgets/themes.dart';
+
+import 'package:shani/models/catalog.dart';
+import 'package:shani/pages/home_detail_page.dart';
+import 'package:shani/widgets/home_widgets/CatalogImage.dart';
+import 'package:shani/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CatalogList extends StatelessWidget {

@@ -2,11 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_ecommerce_app/models/catalog.dart';
-import 'package:flutter_ecommerce_app/utils/routes.dart';
-import 'package:flutter_ecommerce_app/widgets/home_widgets/CatalogHeader.dart';
-import 'package:flutter_ecommerce_app/widgets/home_widgets/CatalogList.dart';
-import 'package:flutter_ecommerce_app/widgets/themes.dart';
+
+import 'package:shani/models/catalog.dart';
+import 'package:shani/utils/routes.dart';
+import 'package:shani/widgets/home_widgets/CatalogHeader.dart';
+import 'package:shani/widgets/home_widgets/CatalogList.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class Home extends StatefulWidget {
@@ -24,7 +24,7 @@ class _HomeState extends State<Home> {
   }
 
   loadData() async {
-    var catalogJson = await rootBundle.loadString('/files/catalog.json');
+    var catalogJson = await rootBundle.loadString("assets/files/catalog.json");
     // print(catalogJson);
     var data = jsonDecode(catalogJson);
     // print(data);

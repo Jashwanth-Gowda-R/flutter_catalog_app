@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_app/pages/cart.dart';
-import 'package:flutter_ecommerce_app/pages/home_page.dart';
-import 'package:flutter_ecommerce_app/pages/login.dart';
-import 'package:flutter_ecommerce_app/utils/routes.dart';
-import 'package:flutter_ecommerce_app/widgets/themes.dart';
+import 'package:shani/pages/cart.dart';
+import 'package:shani/pages/home_page.dart';
+import 'package:shani/pages/login.dart';
+import 'package:shani/utils/routes.dart';
+import 'package:shani/widgets/themes.dart';
 
 void main() {
   runApp(MyApp());

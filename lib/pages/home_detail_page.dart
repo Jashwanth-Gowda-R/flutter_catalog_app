@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_app/models/catalog.dart';
-import 'package:flutter_ecommerce_app/widgets/themes.dart';
+import 'package:shani/models/catalog.dart';
+
 import 'package:velocity_x/velocity_x.dart';
 
 class HomeDetailsPage extends StatelessWidget {
