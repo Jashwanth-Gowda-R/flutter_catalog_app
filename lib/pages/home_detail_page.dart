@@ -28,7 +28,7 @@ class HomeDetailsPage extends StatelessWidget {
                             context.theme.buttonColor),
                         shape: MaterialStateProperty.all(StadiumBorder())),
                     child: "Add Cart".text.lg.make())
-                .wh(100, 50)
+                .wh(110, 50)
           ],
         ).p32(),
       ),
@@ -47,17 +47,23 @@ class HomeDetailsPage extends StatelessWidget {
             child: Container(
               color: context.cardColor,
               width: context.screenWidth,
-              child: Column(
-                children: [
-                  catalog.name.text.xl4.color(context.accentColor).bold.make(),
-                  catalog.desc.text.textStyle(context.captionStyle).xl.make(),
-                  'Et et tempor kasd no amet dolore dolor sed sed stet. Et eirmod amet est dolore gubergren lorem, diam accusam. Labore vero sanctus dolore amet vero ipsum, sed sit diam lorem gubergren et stet et, est magna nonumy eos tempor, sit ipsum et ipsum vero kasd clita, accusam sit tempor.'
-                      .text
-                      .textStyle(context.captionStyle)
-                      .make()
-                      .p16()
-                ],
-              ).py64(),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    catalog.name.text.xl4
+                        .color(context.accentColor)
+                        .bold
+                        .make(),
+                    catalog.desc.text.textStyle(context.captionStyle).xl.make(),
+                    'Et et tempor kasd no amet dolore dolor sed sed stet. Et eirmod amet est dolore gubergren lorem, diam accusam. Labore vero sanctus dolore amet vero ipsum, sed sit diam lorem gubergren et stet et, est magna nonumy eos tempor, sit ipsum et ipsum vero kasd clita, accusam sit tempor.Diam sit accusam takimata justo dolores tempor sadipscing, et sed gubergren dolor elitr aliquyam sanctus, diam et elitr ipsum voluptua,.'
+                        .text
+                        .textStyle(context.captionStyle)
+                        .center
+                        .make()
+                        .p16()
+                  ],
+                ).py20(),
+              ),
             ),
           ))
         ]),
