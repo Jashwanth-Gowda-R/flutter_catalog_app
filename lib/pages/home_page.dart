@@ -39,13 +39,16 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     // final dummyList = List.generate(30, (index) => CatalogModel.products[0]);
     return Scaffold(
-        backgroundColor: MyTheme.creamColor,
+        backgroundColor: context.canvasColor,
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             Navigator.pushNamed(context, MyRoutes.cartRoute);
           },
-          backgroundColor: MyTheme.darkBluishColor,
-          child: Icon(Icons.shopping_cart),
+          backgroundColor: context.theme.buttonColor,
+          child: Icon(
+            Icons.shopping_cart,
+            color: Colors.white,
+          ),
         ),
         body: SafeArea(
           child: Container(

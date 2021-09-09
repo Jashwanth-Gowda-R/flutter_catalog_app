@@ -14,9 +14,9 @@ class HomeDetailsPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -24,8 +24,8 @@ class HomeDetailsPage extends StatelessWidget {
             ElevatedButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(MyTheme.darkBluishColor),
+                        backgroundColor: MaterialStateProperty.all(
+                            context.theme.buttonColor),
                         shape: MaterialStateProperty.all(StadiumBorder())),
                     child: "Add Cart".text.lg.make())
                 .wh(100, 50)
@@ -45,14 +45,11 @@ class HomeDetailsPage extends StatelessWidget {
             arcType: VxArcType.CONVEY,
             edge: VxEdge.TOP,
             child: Container(
-              color: Colors.white,
+              color: context.cardColor,
               width: context.screenWidth,
               child: Column(
                 children: [
-                  catalog.name.text.xl4
-                      .color(MyTheme.darkBluishColor)
-                      .bold
-                      .make(),
+                  catalog.name.text.xl4.color(context.accentColor).bold.make(),
                   catalog.desc.text.textStyle(context.captionStyle).xl.make(),
                   'Et et tempor kasd no amet dolore dolor sed sed stet. Et eirmod amet est dolore gubergren lorem, diam accusam. Labore vero sanctus dolore amet vero ipsum, sed sit diam lorem gubergren et stet et, est magna nonumy eos tempor, sit ipsum et ipsum vero kasd clita, accusam sit tempor.'
                       .text
