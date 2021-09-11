@@ -4,11 +4,11 @@ class CatalogModel {
   static List<Item> products;
 
   // Get Item by ID
-  static Item getById(int id) =>
+  Item getById(int id) =>
       products.firstWhere((element) => element.id == id, orElse: null);
 
   // Get Item by position
-  static Item getByPosition(int pos) => products[pos];
+  Item getByPosition(int pos) => products[pos];
 }
 
 class Item {
