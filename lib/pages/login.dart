@@ -65,8 +65,10 @@ class _LoginState extends State<Login> {
                         labelText: 'Username',
                       ),
                       onChanged: (value) {
-                        name = value;
-                        setState(() {});
+                        // name = value;
+                        setState(() {
+                          name = value;
+                        });
                       },
                       validator: (value) {
                         if (value.isEmpty) {
