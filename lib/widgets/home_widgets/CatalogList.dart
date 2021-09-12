@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shani/models/cart.dart';
 
 import 'package:shani/models/catalog.dart';
 import 'package:shani/pages/home_detail_page.dart';
